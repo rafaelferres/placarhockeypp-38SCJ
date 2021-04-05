@@ -10,24 +10,29 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/main_background"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
         android:scaleType="centerCrop"
-        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/rockey_main"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/homeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/app_name"
+        android:layout_marginTop="344dp"
+        android:text="Hockey App"
+        android:textColor="@android:color/black"
         android:textSize="28sp"
-        android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/homeMessage"

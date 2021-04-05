@@ -1,88 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/colorWhite">
 
     <!-- Home team -->
     <TextView
         android:id="@+id/gameScoreHomeTeamName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/gameScoreHomeTeamScore"
-        app:layout_constraintEnd_toEndOf="@id/gameScoreHomeTeamScore"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/gameScoreHomeIncrease"
-        />
-    
-    <ImageView
-        android:id="@+id/gameScoreHomeIncrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:padding="15dp"
-        android:src="@android:drawable/arrow_up_float"
-        app:layout_constraintStart_toStartOf="@id/gameScoreHomeTeamScore"
         app:layout_constraintEnd_toEndOf="@id/gameScoreHomeTeamScore"
-        app:layout_constraintBottom_toTopOf="@id/gameScoreHomeTeamScore"
-        />
-
-    <TextView
-        android:id="@+id/gameScoreHomeTeamScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="00"
-        android:textSize="100sp"
-        app:layout_constraintEnd_toStartOf="@id/gameScoreAwayTeamScore"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-
-    <ImageView
-        android:id="@+id/gameScoreHomeDecrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:padding="15dp"
-        android:src="@android:drawable/arrow_down_float"
         app:layout_constraintStart_toStartOf="@id/gameScoreHomeTeamScore"
-        app:layout_constraintEnd_toEndOf="@id/gameScoreHomeTeamScore"
-        app:layout_constraintTop_toBottomOf="@id/gameScoreHomeTeamScore"
-        />
-    
+        app:layout_constraintTop_toTopOf="parent" />
+
     <!-- Away team -->
     <TextView
         android:id="@+id/gameScoreAwayTeamName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/gameScoreAwayTeamScore"
-        app:layout_constraintEnd_toEndOf="@id/gameScoreAwayTeamScore"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/gameScoreAwayIncrease"
-        />
-    
-    <ImageView
-        android:id="@+id/gameScoreAwayIncrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:padding="15dp"
-        android:src="@android:drawable/arrow_up_float"
-        app:layout_constraintStart_toStartOf="@id/gameScoreAwayTeamScore"
         app:layout_constraintEnd_toEndOf="@id/gameScoreAwayTeamScore"
-        app:layout_constraintBottom_toTopOf="@id/gameScoreAwayTeamScore"
-        />
-    
-    <TextView
-        android:id="@+id/gameScoreAwayTeamScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="00"
-        android:textSize="100sp"
-        app:layout_constraintStart_toEndOf="@id/gameScoreHomeTeamScore"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="@id/gameScoreAwayTeamScore"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/gameScoreAwayDecrease"
@@ -90,11 +37,68 @@
         android:layout_height="60dp"
         android:padding="15dp"
         android:src="@android:drawable/arrow_down_float"
-        app:layout_constraintStart_toStartOf="@id/gameScoreAwayTeamScore"
         app:layout_constraintEnd_toEndOf="@id/gameScoreAwayTeamScore"
-        app:layout_constraintTop_toBottomOf="@id/gameScoreAwayTeamScore"
-        />
+        app:layout_constraintStart_toStartOf="@id/gameScoreAwayTeamScore"
+        app:layout_constraintTop_toBottomOf="@id/gameScoreAwayTeamScore" />
 
+    <ImageView
+        android:id="@+id/gameScoreHomeDecrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintEnd_toEndOf="@id/gameScoreHomeTeamScore"
+        app:layout_constraintStart_toStartOf="@id/gameScoreHomeTeamScore"
+        app:layout_constraintTop_toBottomOf="@id/gameScoreHomeTeamScore" />
+
+    <TextView
+        android:id="@+id/gameScoreAwayTeamScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/gameScoreHomeTeamScore"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.341" />
+
+    <TextView
+        android:id="@+id/gameScoreHomeTeamScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/gameScoreAwayTeamScore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.341" />
+
+    <ImageView
+        android:id="@+id/gameScoreHomeIncrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintBottom_toTopOf="@id/gameScoreHomeTeamScore"
+        app:layout_constraintEnd_toEndOf="@id/gameScoreHomeTeamScore"
+        app:layout_constraintStart_toStartOf="@id/gameScoreHomeTeamScore" />
+
+    <ImageView
+        android:id="@+id/gameScoreAwayIncrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintBottom_toTopOf="@id/gameScoreAwayTeamScore"
+        app:layout_constraintEnd_toEndOf="@id/gameScoreAwayTeamScore"
+        app:layout_constraintStart_toStartOf="@id/gameScoreAwayTeamScore" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/gameScoreExitButton"
@@ -103,15 +107,119 @@
         android:layout_marginBottom="30dp"
         android:text="@string/scoreGameExit"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:cornerRadius="100dp"
-        />
-    
-    
-    
-    
-    
-    
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:backgroundTint="@color/colorAccent"/>
+
+    <!-- Home team -->
+
+    <!-- Away team -->
+
+
+    <!-- Fauls -->
+
+    <ImageView
+        android:id="@+id/gameFaulHomeIncrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintBottom_toTopOf="@id/gameFaulHomeTeamFaul"
+        app:layout_constraintEnd_toEndOf="@id/gameFaulHomeTeamFaul"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gameFaulHomeTeamFaul" />
+
+    <TextView
+        android:id="@+id/gameFaulHomeTeamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fauls"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/gameFaulHomeIncrease"
+        app:layout_constraintEnd_toEndOf="@id/gameFaulHomeTeamFaul"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="@id/gameFaulHomeTeamFaul"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/gameFaulAwayTeamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@id/gameFaulAwayIncrease"
+        app:layout_constraintEnd_toEndOf="@id/gameFaulAwayTeamFaul"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="@id/gameFaulAwayTeamFaul"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/gameFaulAwayDecrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintEnd_toEndOf="@id/gameFaulAwayTeamFaul"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gameFaulAwayTeamFaul"
+        app:layout_constraintTop_toBottomOf="@id/gameFaulAwayTeamFaul" />
+
+    <ImageView
+        android:id="@+id/gameFaulAwayIncrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintBottom_toTopOf="@id/gameFaulAwayTeamFaul"
+        app:layout_constraintEnd_toEndOf="@id/gameFaulAwayTeamFaul"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gameFaulAwayTeamFaul" />
+
+    <ImageView
+        android:id="@+id/gameFaulHomeDecrease"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        android:padding="15dp"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintEnd_toEndOf="@id/gameFaulHomeTeamFaul"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gameFaulHomeTeamFaul"
+        app:layout_constraintTop_toBottomOf="@id/gameFaulHomeTeamFaul" />
+
+    <TextView
+        android:id="@+id/gameFaulAwayTeamFaul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/gameFaulHomeTeamFaul"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751" />
+
+    <TextView
+        android:id="@+id/gameFaulHomeTeamFaul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/gameFaulAwayTeamFaul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
