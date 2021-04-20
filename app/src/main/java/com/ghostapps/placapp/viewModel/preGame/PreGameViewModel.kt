@@ -2,7 +2,7 @@ package com.ghostapps.placapp.viewModel.preGame
 
 import androidx.lifecycle.ViewModel
 
-public class PreGameViewModel(
+class PreGameViewModel(
     val contract: PreGameContract
 ) : ViewModel() {
 
