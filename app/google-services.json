@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "655309006323",
+    "project_id": "fiap-38scj-mobile",
+    "storage_bucket": "fiap-38scj-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655309006323:android:d48c527e653178fb681e86",
+        "android_client_info": {
+          "package_name": "com.ghostapps.placarapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655309006323-f4vvbk7jfsfnkm96g7jehjf1a577pomc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRWvoYpsQ5zrup4255siFi3iSpyYDYfuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "655309006323-f4vvbk7jfsfnkm96g7jehjf1a577pomc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

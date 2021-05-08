@@ -82,11 +82,7 @@ class GameScoreViewModel(
                 date = Date().time
             )) as Boolean;
 
-            if (success) {
-                contract.onExitPressed()
-            } else {
-                contract.onInsertRegisterFails()
-            }
+            contract.onExitPressed()
 
         }.start()
     }

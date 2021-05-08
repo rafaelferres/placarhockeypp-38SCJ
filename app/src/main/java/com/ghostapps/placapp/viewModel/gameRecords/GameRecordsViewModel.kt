@@ -15,7 +15,10 @@ class GameRecordsViewModel(
 
     fun loadRecords() {
         Thread {
-            recordsList.postValue(getAllRegister.execute())
+            val records = getAllRegister.execute()
+            records.sortByDescending { it.date }
+
+            recordsList.postValue(records)
         }.start()
     }
 
